@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+  }
+  [class^="number-slide"],
+  [class*=" number-slide"] {
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  .slika_mala{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  
+  .overlay{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100000;
+  }
+
+
+.slika_velika{
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    aspect-ratio: initial;
+}
+
+.instructions{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.74);
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000000;
+}
+
+.instructions h3{
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-top: 23rem;
+}
+
+.instructions img{
+    width: 60px;
+    position: absolute;
+    animation-name: mis;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.linkovi-l{
+  display: flex;
+}
+
+.natrag-gumb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 130px;
+  height: 50px;
+  margin-left: 40px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.natrag-gumb p{
+  font-size: 1.4rem;
+  margin: 0 10px 0 10px;
+}
+
+.natrag-gumb i{
+  font-size: 1rem;
+  margin: 0 0 0 15px;
+}
+
+@keyframes mis{
+    0% {
+        left: 40%;
+        bottom: 40%;
+        transform: rotate(0deg);
+      }
+      25% {
+        left: 49%;
+        bottom: 45%;
+        transform: rotate(20deg);
+      }
+      50%{
+        left: 60%;
+        bottom: 40%;
+        transform: rotate(40deg);
+      }
+      75%{
+        left: 49%;
+        bottom: 45%;
+        transform: rotate(20deg);
+      }
+      100% {
+        left: 40%;
+        bottom: 40%;
+        transform: rotate(0deg);
+      }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    [class^="number-slide"],
+    [class*=" number-slide"] {
+      height: 50vh;
+      max-height: 100vh;
+      width: 100%;
+      background-color: transparent;
+    }
+}
