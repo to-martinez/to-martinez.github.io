@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Photoshop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -39,6 +40,16 @@
             </div>
         </div>
     </div>
+
+    <div class="strelice">
+        <div class="s1" id="s1">
+            <i class="fa-solid fa-chevron-left" ></i>
+        </div>
+        <div class="s2" id="s2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
         
     <div class="izbornik" id="izbornik">
         <div class="blur" onclick="izb()"></div>
@@ -83,7 +94,7 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
-    <script>
+        <script>
       var slider = new KeenSlider("#my-keen-slider", {
         loop: true,
         slides: {
@@ -97,8 +108,7 @@
             },
         },
       })
-      
     </script>
-
+    
 </body>
 </html>

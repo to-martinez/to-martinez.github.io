@@ -59,10 +59,7 @@ body{
 }
 
 .kategorije1{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 100%);
 }
 
 .kategorije h2{
@@ -115,6 +112,7 @@ body{
     font-size: 2rem;
     color: white;
     display: block;
+    margin-left: 47px;
 }
 
 .hamburger:hover{
@@ -188,7 +186,7 @@ header a{
     height: 15%;
     top: 0;
     position: fixed;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.575) 60%, rgba(0, 0, 0, 0));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.747) 0%, rgba(0, 0, 0, 0.199) 80%, rgba(0, 0, 0, 0));
 }
 
 .header-radovi{
@@ -202,6 +200,10 @@ header a{
     width: 69%;
 }
 
+.header-radovi h2{
+    font-weight: 300;
+    font-size: 2rem;
+}
 
 .kontakt-content{
     display: flex;
@@ -457,6 +459,7 @@ footer{
     z-index: 100;
     right: -100%;
     transition: right 0.3s ease;
+    z-index: 10000000;
 }
 
 .izbornik1{

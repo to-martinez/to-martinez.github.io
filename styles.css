@@ -75,11 +75,14 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  width: 130px;
-  height: 50px;
-  margin-left: 40px;
+  width: 160px;
+  height: 40px;
   text-decoration: none;
   border-radius: 20px;
+  position: relative;
+  left: -260px;
+  top: 5px;
+  background-color: rgba(0, 0, 0, 0.205);
 }
 
 .natrag-gumb p{
@@ -90,6 +93,54 @@ body {
 .natrag-gumb i{
   font-size: 1rem;
   margin: 0 0 0 15px;
+}
+
+.natrag-gumb:hover{
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.strelice{
+  z-index: 10000000;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.774) 0%, rgba(5,5,5,0) 10%, rgba(48,48,48,0) 90%, rgba(0, 0, 0, 0.774) 100%);
+}
+
+.strelice i{
+  font-size: 3rem;
+  filter: drop-shadow(0 0 0.4rem black);
+  margin: 55px;
+  animation-name: str;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+@keyframes str{
+    0%{
+      margin: 55px;
+    }
+    25%{
+      margin: 35px;
+    }
+    50%{
+      margin: 55px;
+    }
+    75%{
+      margin: 35px;
+      opacity: 100%;
+    }
+    100%{
+      margin: 55px;
+      opacity: 0%;
+    }
 }
 
 @keyframes mis{
