@@ -475,13 +475,14 @@ footer{
 }
 
 .content-izbornik{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.945);
     font-size: 2rem;
-    display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    
+    padding-top: 250px;
 }
 
 .content-izbornik *{
@@ -493,6 +494,10 @@ footer{
 
 .content-izbornik li:hover{
     color: rgb(192, 192, 192);
+}
+
+.content-izbornik h3{
+    margin: 2rem 0 0 0;
 }
 
 .blur{
