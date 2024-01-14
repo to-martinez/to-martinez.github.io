@@ -175,3 +175,17 @@ body {
       background-color: transparent;
     }
 }
+
+@media screen and (max-width: 600px) {
+
+  .strelice{
+    display: none;
+  }
+  .instructions{
+    pointer-events: none;
+    opacity: 0;
+  }
+  .keen-slider__slide{
+    margin-top: 9rem;
+  }
+}
