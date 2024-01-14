@@ -508,7 +508,17 @@ footer{
     font-weight: 100;
 }
 
-
+footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 50px;
+    font-weight: 100;
+}
 
 @media screen and (max-width: 1300px) {
     .slika-1{
@@ -717,4 +727,11 @@ footer{
         width: 100%;
         margin: 0;
     }
+    footer{
+        padding-bottom: 100px;
+    }
+    footer a{
+        display: none;
+    }
+
 }

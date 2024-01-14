@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body style="overflow: hidden;" onload="checkCookie()">
+
+    <div class="instructions" id="instructions" onclick="getElementById('instructions').style.display = 'none'">
+        <h3>Scroll-ajte mišem ili prstom c:</h3>
+        <img src="img/cursor.png" alt="" srcset=""></img>
+    </div> 
+
+    <div class="header-rad">
+        <div class="header-radovi">
+            <div class="linkovi-l">
+                <a href="radovi.html" class="natrag-gumb">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+            <div class="linkovi" onclick="izb()">
+                <a class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="strelice">
+        <div class="s1" id="s1">
+            <i class="fa-solid fa-chevron-left" ></i>
+        </div>
+        <div class="s2" id="s2">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
+        
+    <div class="izbornik" id="izbornik">
+        <div class="blur" onclick="izb()"></div>
+        <div class="content-izbornik">
+            <h3>Portfolio</h3>
+            <ul>
+                <a href="index.html"><li>Početna</li></a>
+                <a href="radovi.html"><li>Radovi</li></a>
+                <a href="index.html#o-meni"><li href="index.html #o-meni">O meni</li></a>                
+                <a href="index.html#kontakt"><li href="index.html #kontakt">Kontakt</li></a>
+            </ul>
+        </div>
+    </div>
+   
+
+    <div class="kategorije1">
+        <div id="my-keen-slider" class="keen-slider">
+            <div class="keen-slider__slide number-slide1">
+                <img src="img/ps1.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps1.jpg')">
+            </div>
+            <div class="keen-slider__slide number-slide2">
+                <img src="img/ps2.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps2.jpg')">
+            </div>
+            <div class="keen-slider__slide number-slide3">
+                <img src="img/ps3.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps3.jpg')">
+            </div>
+            <div class="keen-slider__slide number-slide4">
+                <img src="img/ps4.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps4.jpg')">
+            </div>
+            <div class="keen-slider__slide number-slide5">
+                <img src="img/ps5.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps5.jpg')">
+            </div>
+            <div class="keen-slider__slide number-slide6">
+                <img src="img/ps6.jpg" id="slika_carousel" class="slika_mala" onclick="openPreview('img/ps6.jpg')">
+            </div>
+        </div>
+        <div class="overlay" id="overlay" onclick="closePreview()">
+            <img class="slika_velika" id="slika_velika" src="" alt="" srcset=""></img>
+            
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+        <script>
+      var slider = new KeenSlider("#my-keen-slider", {
+        loop: true,
+        slides: {
+          perView: 1.6,
+          spacing: 10,
+          origin: 'center',
+        },
+        breakpoints: {
+            '(max-width: 1000px)': {
+                
+            },
+        },
+      })
+    </script>
+    
+</body>
+</html>
