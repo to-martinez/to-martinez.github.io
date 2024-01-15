@@ -6,11 +6,11 @@ function izb() {
 
   if (!isMoved) {
     element.style.right = '-100%';
-    hamb.style.display = 'block';
+    hamb.style.opacity = '1';
     isMoved = true;
   } else {
     element.style.right = '0';
-    hamb.style.display = 'none';
+    hamb.style.opacity = '0';
     isMoved = false;
   }
 }
@@ -22,7 +22,7 @@ const header1 = document.getElementById('drugih');
 window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
 
-  const threshold = 200;
+  const threshold = 150;
   if (window.innerWidth > 850) {
      if (scrollPosition > threshold) {
     header.style.opacity = '0';  
@@ -59,44 +59,54 @@ const kat3 = document.getElementById('kat3');
 const kats1 = document.getElementById('kat_slika1');
 const kats2 = document.getElementById('kat_slika2');
 const kats3 = document.getElementById('kat_slika3');
+const katt1 = document.getElementById('kat_txt1');
+const katt2 = document.getElementById('kat_txt2');
+const katt3 = document.getElementById('kat_txt3');
 
-
-function removeBlur(e1, e2) {
+function removeBlur(e1, e2, e3) {
   e1.style.filter = 'none'; 
-  e1.style.transform = 'scale(1.03)';
+  e1.style.transform = 'scale(1.08)';
   e1.style.filter = 'drop-shadow(0 0 5rem black)';
   e1.style.zIndex = "100";
-  e2.style.transform = 'scale(1.15)';
+  e2.style.transform = 'scale(1.1)';
   e1.style.transform = 'all .2s ease-in-out';
   e2.style.transition = "all .2s ease-in-out";
+  e3.style.transform = 'scale(1.1)';
+  e3.style.transition = 'all .2s ease-in-out';
+  e3.style.filter = 'drop-shadow(0 0 1.2rem black)';
+  e2.style.filter = 'drop-shadow(1rem 1rem 2rem black)';
 }
 
-function addBlur(e1, e2) {
+function addBlur(e1, e2, e3) {
   e1.style.transform = 'scale(1)';
   e2.style.transform = 'scale(1)';
   e1.style.zIndex = "1";
   e1.style.filter = "none";
+  e3.style.filter = "none";
+  e3.style.transform = "scale(1)";
+  e2.style.filter = "none";
+  
 }
 
 kat1.addEventListener('mouseover', function() {
-  removeBlur(kat1, kats1);
+  removeBlur(kat1, kats1, katt1);
 });
 kat1.addEventListener('mouseout', function() {
-  addBlur(kat1, kats1);
+  addBlur(kat1, kats1, katt1);
 });
 
 kat2.addEventListener('mouseover', function() {
-  removeBlur(kat2, kats2);
+  removeBlur(kat2, kats2, katt2);
 });
 kat2.addEventListener('mouseout', function() {
-  addBlur(kat2, kats2);
+  addBlur(kat2, kats2, katt2);
 });
 
 kat3.addEventListener('mouseover', function() {
-  removeBlur(kat3, kats3);
+  removeBlur(kat3, kats3, katt3);
 });
 kat3.addEventListener('mouseout', function() {
-  addBlur(kat3, kats3);
+  addBlur(kat3, kats3, katt3);
 });
 
 
@@ -154,3 +164,16 @@ function checkCookie() {
 }
 
 
+function vise(){
+
+  if(document.getElementById('vise').style.display == "block"){
+    document.getElementById('vise').style.display = "none";
+    document.getElementById('vise-gumb').innerHTML = "Pročitajte više";
+  }
+  else{
+    document.getElementById('vise').style.display = "block";
+    document.getElementById('vise-gumb').innerHTML = "Manje";
+  }
+  
+
+}

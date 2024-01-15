@@ -40,7 +40,7 @@
             <div class="content-izbornik">
                 <h3>Portfolio</h3>
                 <ul>
-                    <a href="#pocetna" onclick="izb()"><li>Početna</li></a>
+                    <a href="#top" onclick="izb()"><li>Početna</li></a>
                     <a href="radovi.html"><li>Radovi</li></a>
                     <a href="#o-meni" onclick="izb()"> <li>O meni</li></a>
                     <a href="#kontakt" onclick="izb()"><li>Kontakt</li></a>
@@ -57,7 +57,8 @@
             <div class="main-content">
                 <div class="content cont1">
                     <h1>Pozdrav! Ja sam <b>Tomislav Martinez.</b></h1>
-                    <p>Dobro došli na moj portfolio! Ja sam student na Sveučilištu Sjever u Varaždinu i aspiring front-end developer. Pogledajte moje radove klikom na gumb ispod!</p>
+                    <p>Dobro došli na moj portfolio! Ja sam student na Sveučilištu Sjever u Varaždinu i aspiring front-end developer.</p>
+                    <p>Pogledajte moje radove klikom na gumb ispod!</p>
                     <a href="radovi.html" class="gumb-portfolio">Pretražite portfolio</a>
                 </div>
                 <div class="slika slika-1">
@@ -79,14 +80,18 @@
                     <p>
                         Ja sam Tomislav Martinez. Dolazim iz Krapine i student sam 3. godine preddiplomskog studija Multimedija na Sveučilištu Sjever. 
                     </p>
-                    <p>
-                        Cilj mi je proširiti vlastite kompetencije i znanja, proširiti poznanstva i povezati se s profesionalnim osobama te vršnjacima u struci. 
-                        Socijalan sam i volim raditi uz kvalitetno društvo u ugodnom okruženju.
-                    </p>
-                    <p>
-                        Vješt sam u oblikovanju web stranica pomoću HTML-a i CSS-a, te u Adobe programima Adobe Photoshop i Adobe Illustrator. 
-                        Početnik sam u alatu Figma, no želim učiti i polako ali sigurno usvajam sve mogućnosti.
-                    </p>
+                    
+                    <div class="vise" id="vise">
+                        <p>
+                            Cilj mi je proširiti vlastite kompetencije i znanja, proširiti poznanstva i povezati se s profesionalnim osobama te vršnjacima u struci. 
+                            Socijalan sam i volim raditi uz kvalitetno društvo u ugodnom okruženju.
+                        </p>
+                        <p>
+                            Vješt sam u oblikovanju web stranica pomoću HTML-a i CSS-a, te u Adobe programima Adobe Photoshop i Adobe Illustrator. 
+                            Početnik sam u alatu Figma, no želim učiti i polako ali sigurno usvajam sve mogućnosti.
+                        </p>
+                    </div>
+                    <p class="vise-gumb" id="vise-gumb" onclick="vise()">Pročitajte više</p>
                     <!--<a href="radovi.html" class="gumb-portfolio">Pretražite portfolio</a>-->
                 </div>
                 
@@ -133,7 +138,7 @@
     </div>
 
     <footer>
-        <a href="#top">Natrag na vrh</a>
+        <a href="#top" class="vise-gumb">Natrag na vrh</a>
     </footer>
 
     <script src="script.js"></script>

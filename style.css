@@ -80,7 +80,7 @@ body{
 }
 
 .kat1{
-    background: linear-gradient(180deg, rgba(228,77,38,1) 0%, rgba(38, 76, 228, 0.87) 72%, rgba(42, 85, 255, 0.76) 100%);
+    background: linear-gradient(180deg, rgba(228,77,38,1) 0%,  rgb(9, 45, 190) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +90,7 @@ body{
 }
 
 .kat2{
-    background: linear-gradient(180deg, rgba(152,211,255,1) 0%, rgba(25,151,243,0.76) 72%, rgba(23, 151, 242, 0.733) 100%);
+    background: linear-gradient(180deg, rgb(113, 190, 248) 0%, rgb(1, 97, 167) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,7 @@ body{
 }
 
 .kat3{
-    background: linear-gradient(180deg, rgb(226, 143, 18) 0%, rgba(255, 154, 2, 0.781) 100%);
+    background: linear-gradient(180deg, rgb(226, 143, 18) 0%, rgb(141, 85, 0) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +155,7 @@ li{
 }
 
 header{
-    z-index: 1000;
+    z-index: 100000000;
     width: 100%;
     position: sticky;
     top: 0;
@@ -188,7 +188,7 @@ header a{
     height: 15%;
     top: 0;
     position: fixed;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.747) 0%, rgba(0, 0, 0, 0.199) 80%, rgba(0, 0, 0, 0));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.664) 0%, rgba(0, 0, 0, 0));
 }
 
 .header-radovi{
@@ -206,6 +206,8 @@ header a{
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 2rem;
+    filter: drop-shadow(0 0 1rem black);
+    
 }
 
 .kontakt-content{
@@ -259,6 +261,7 @@ header a{
     display: grid;
     grid-template-columns: 50% auto;
     height: 100%;
+    align-content: center;
 }
 
 
@@ -279,11 +282,25 @@ header a{
 
 .cont1{
     margin-top: 12rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100000;
 }
 
-.cont2{
-    margin-top: 10rem;
+.vise{
+    display: none;
 }
+
+.vise-gumb{
+    cursor: pointer;
+    color: rgb(194, 194, 194);
+}
+.vise-gumb:hover{
+    color: rgb(133, 133, 133);
+}
+
 
 .cont3{
     margin-top: 5rem;
@@ -524,6 +541,11 @@ footer a{
     font-weight: 100;
 }
 
+
+.fa-bars{
+    filter: drop-shadow(0 0 0.5rem black);
+}
+
 @media screen and (max-width: 1300px) {
     .slika-1{
         width: 80%;
@@ -711,6 +733,7 @@ footer a{
         margin-left: 18px;
         font-size: 1.8rem;
     }
+
     .fa-chevron-left{
         font-size: 1.8rem;
     }
