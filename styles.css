@@ -116,6 +116,12 @@ body {
   animation-iteration-count: 1;
 }
 
+
+.kat_slika1, .kat_slika2, .kat_slika3{
+  transform: scale(1);
+  transition: all 1s ease-in-out ;
+}
+
 @keyframes str{
     0%{
       margin: 55px;

@@ -56,38 +56,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const kat1 = document.getElementById('kat1');
 const kat2 = document.getElementById('kat2');
 const kat3 = document.getElementById('kat3');
+const kats1 = document.getElementById('kat_slika1');
+const kats2 = document.getElementById('kat_slika2');
+const kats3 = document.getElementById('kat_slika3');
 
-function removeBlur(element) {
-  element.style.filter = 'none'; 
-  element.style.transform = 'scale(1.03)';
-  element.style.filter = 'drop-shadow(0 0 5rem black)';
-  element.style.zIndex = "100";
+
+function removeBlur(e1, e2) {
+  e1.style.filter = 'none'; 
+  e1.style.transform = 'scale(1.03)';
+  e1.style.filter = 'drop-shadow(0 0 5rem black)';
+  e1.style.zIndex = "100";
+  e2.style.transform = 'scale(1.15)';
+  e1.style.transform = 'all .2s ease-in-out';
+  e2.style.transition = "all .2s ease-in-out";
 }
 
-function addBlur(element) {
-  element.style.transform = 'scale(1)';
-  element.style.zIndex = "1";
+function addBlur(e1, e2) {
+  e1.style.transform = 'scale(1)';
+  e2.style.transform = 'scale(1)';
+  e1.style.zIndex = "1";
+  e1.style.filter = "none";
 }
 
 kat1.addEventListener('mouseover', function() {
-  removeBlur(kat1);
+  removeBlur(kat1, kats1);
 });
 kat1.addEventListener('mouseout', function() {
-  addBlur(kat1);
+  addBlur(kat1, kats1);
 });
 
 kat2.addEventListener('mouseover', function() {
-  removeBlur(kat2);
+  removeBlur(kat2, kats2);
 });
 kat2.addEventListener('mouseout', function() {
-  addBlur(kat2);
+  addBlur(kat2, kats2);
 });
 
 kat3.addEventListener('mouseover', function() {
-  removeBlur(kat3);
+  removeBlur(kat3, kats3);
 });
 kat3.addEventListener('mouseout', function() {
-  addBlur(kat3);
+  addBlur(kat3, kats3);
 });
 
 

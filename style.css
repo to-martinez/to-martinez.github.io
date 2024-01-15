@@ -12,6 +12,10 @@ html {
     color: white;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -58,13 +62,17 @@ body{
     grid-template-columns: 1fr 1.1fr 1fr;
 }
 
+.kat3 img{
+    width: 250px;
+}
+
 .kategorije1{
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 100%);
 }
 
 .kategorije h2{
     position: absolute;
-    bottom: 200px;
+    bottom: 220px;
 }
 
 .kat1, .kat2, .kat3{
@@ -102,12 +110,6 @@ body{
     transition: 0.2s ease;
     z-index: 1;
 }
-
-.kat2 p{
-    width: 69%;
-    margin-top: 2rem;
-}
-
 .hamburger{
     font-size: 2rem;
     color: white;
@@ -201,7 +203,8 @@ header a{
 }
 
 .header-radovi h2{
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 2px;
     font-size: 2rem;
 }
 
@@ -322,12 +325,13 @@ p{
 }
 
 .slika-1{
-    margin-top: 8rem;
+    position: relative;
+    transform: scale(1.7);
+    top: 70px;
 }
 
 .slika-2{
-    transform:scaleX(-1);
-    margin-right: 4rem;
+    margin-right: 7rem;
 }
 
 
